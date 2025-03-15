@@ -27,7 +27,7 @@ int main() {
     } 
 
     int ret = cam.initCamera();
-    cam.configureStill(width, height, formats::RGB888, 1, 0);
+    cam.configureStill(width, height, formats::RGB888, 1, libcamera::Orientation::Rotate0);
     ControlList controls_;
     int64_t frame_time = 1000000 / 10;
     // Set frame rate

@@ -41,9 +41,9 @@ class LibCamera {
         ~LibCamera(){};
         
         int initCamera();
-        void configureStill(int width, int height, PixelFormat format, int buffercount, int rotation);
+        void configureStill(int width, int height, PixelFormat format, int buffercount, Orientation orientation);
         int startCamera();
-        int resetCamera(int width, int height, PixelFormat format, int buffercount, int rotation);
+        int resetCamera(int width, int height, PixelFormat format, int buffercount, Orientation orientation);
         bool readFrame(LibcameraOutData *frameData);
         void returnFrameBuffer(LibcameraOutData frameData);
 
