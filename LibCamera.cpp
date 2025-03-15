@@ -41,7 +41,7 @@ void LibCamera::configureStill(int width, int height, PixelFormat format, int bu
     config_->at(0).pixelFormat = format;
     if (buffercount)
         config_->at(0).bufferCount = buffercount;
-    Transform transform = Transform::Identity;
+    /*Transform transform = Transform::Identity;
     bool ok;
     Transform rot = transformFromRotation(rotation, &ok);
     if (!ok)
@@ -50,7 +50,7 @@ void LibCamera::configureStill(int width, int height, PixelFormat format, int bu
     if (!!(transform & Transform::Transpose))
         throw std::runtime_error("transforms requiring transpose not supported");
     config_->transform = transform;
-
+   */
     CameraConfiguration::Status validation = config_->validate();
 	if (validation == CameraConfiguration::Invalid)
 		throw std::runtime_error("failed to valid stream configurations");
